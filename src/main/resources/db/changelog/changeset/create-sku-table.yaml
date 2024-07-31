@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-sku-table
+      author: noverlin
+      changes:
+        - createTable:
+            tableName: sku
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: color
+                  type: varchar(50)
+              - column:
+                  name: availability
+                  type: boolean
+              - column:
+                  name: product_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: sku
+            baseColumnNames: product_id
+            constraintName: fk_product_sku
+            referencedTableName: product
+            referencedColumnNames: id

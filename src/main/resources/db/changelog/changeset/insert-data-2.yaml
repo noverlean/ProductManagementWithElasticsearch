@@ -1,0 +1,55 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: author
+      changes:
+        - insert:
+            tableName: product
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "pa"
+              - column:
+                  name: description
+                  value: "description for product a"
+              - column:
+                  name: start_date
+                  valueDate: "2024-01-01"
+              - column:
+                  name: active
+                  valueBoolean: true
+
+        - insert:
+            tableName: product
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "pb"
+              - column:
+                  name: description
+                  value: "description for product b"
+              - column:
+                  name: start_date
+                  valueDate: "2024-02-01"
+              - column:
+                  name: active
+                  valueBoolean: false
+
+        - insert:
+            tableName: product
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "pc"
+              - column:
+                  name: description
+                  value: "description for product c"
+              - column:
+                  name: start_date
+                  valueDate: "2024-03-01"
+              - column:
+                  name: active
+                  valueBoolean: true

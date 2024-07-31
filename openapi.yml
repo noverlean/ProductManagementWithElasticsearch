@@ -1,0 +1,55 @@
+openapi: 3.0.0
+info:
+  title: Product Search API
+  version: 1.0.0
+paths:
+  /api/search:
+    get:
+      summary: Поиск продуктов
+      parameters:
+        - in: query
+          name: keyword
+          schema:
+            type: string
+          required: true
+          description: Поисковое слово
+      responses:
+        '200':
+          description: Успешный ответ
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        startDate:
+          type: string
+          format: date
+        active:
+          type: boolean
+        skus:
+          type: array
+          items:
+            $ref: '#/components/schemas/SKU'
+    SKU:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        color:
+          type: string
+        availability:
+          type: boolean

@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-product-table
+      author: noverlin
+      changes:
+        - createTable:
+            tableName: product
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: description
+                  type: text
+              - column:
+                  name: start_date
+                  type: date
+              - column:
+                  name: active
+                  type: boolean

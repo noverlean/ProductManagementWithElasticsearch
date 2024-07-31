@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: classpath:db/changelog/changeset/create-schema.yaml
+  - include:
+      file: classpath:db/changelog/changeset/create-product-table.yaml
+  - include:
+      file: classpath:db/changelog/changeset/create-sku-table.yaml
+  - include:
+      file: classpath:db/changelog/changeset/insert-data.yaml
+  - include:
+      file: classpath:db/changelog/changeset/insert-data-2.yaml

@@ -1,0 +1,140 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: author
+      changes:
+        - insert:
+            tableName: product
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "Product A"
+              - column:
+                  name: description
+                  value: "Description for Product A"
+              - column:
+                  name: start_date
+                  valueDate: "2024-01-01"
+              - column:
+                  name: active
+                  valueBoolean: true
+
+        - insert:
+            tableName: product
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "Product B"
+              - column:
+                  name: description
+                  value: "Description for Product B"
+              - column:
+                  name: start_date
+                  valueDate: "2024-02-01"
+              - column:
+                  name: active
+                  valueBoolean: false
+
+        - insert:
+            tableName: product
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "Product C"
+              - column:
+                  name: description
+                  value: "Description for Product C"
+              - column:
+                  name: start_date
+                  valueDate: "2024-03-01"
+              - column:
+                  name: active
+                  valueBoolean: true
+
+        - insert:
+            tableName: sku
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "SKU-A1"
+              - column:
+                  name: color
+                  value: "Red"
+              - column:
+                  name: availability
+                  valueBoolean: true
+              - column:
+                  name: product_id
+                  value: 1
+
+        - insert:
+            tableName: sku
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "SKU-A2"
+              - column:
+                  name: color
+                  value: "Blue"
+              - column:
+                  name: availability
+                  valueBoolean: false
+              - column:
+                  name: product_id
+                  value: 1
+
+        - insert:
+            tableName: sku
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "SKU-B1"
+              - column:
+                  name: color
+                  value: "Green"
+              - column:
+                  name: availability
+                  valueBoolean: true
+              - column:
+                  name: product_id
+                  value: 2
+
+        - insert:
+            tableName: sku
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "SKU-C1"
+              - column:
+                  name: color
+                  value: "Yellow"
+              - column:
+                  name: availability
+                  valueBoolean: true
+              - column:
+                  name: product_id
+                  value: 3
+
+        - insert:
+            tableName: sku
+            schemaName: product_schema
+            columns:
+              - column:
+                  name: name
+                  value: "SKU-C2"
+              - column:
+                  name: color
+                  value: "Black"
+              - column:
+                  name: availability
+                  valueBoolean: false
+              - column:
+                  name: product_id
+                  value: 3
