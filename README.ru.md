@@ -1,6 +1,6 @@
 ## 🌐 Языки / Languages
 
-- 🇷🇺 [Русский](README.ru.md)
+- 🇬🇧 [English](README.md)
 
 # 📦 Product Management with Elasticsearch — Тестовое задание
 
